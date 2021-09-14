@@ -32,7 +32,7 @@ public class CsvImprover {
 
             for (String uuid : uuids) {
                 String name = getRandomRoleName();
-                printer.printRecord(uuid, name, getEmail(name), "255");
+                printer.printRecord(uuid, getEmail(name), name, "255");
             }
 
             out.flush();
@@ -52,9 +52,8 @@ public class CsvImprover {
     }
 
     static String getRandomRoleName() {
-        int randRole = new Random().nextInt(2);
         int randNumber = new Random().nextInt(3);
-        return Roles.values()[randRole].roleName + (randNumber + 1);
+        return Roles.values()[randNumber].roleName + (randNumber + 1);
     }
 
     static String getEmail(String name) {
