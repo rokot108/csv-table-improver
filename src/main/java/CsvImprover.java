@@ -52,8 +52,9 @@ public class CsvImprover {
     }
 
     static String getRandomRoleName() {
-        int randNumber = new Random().nextInt(3);
-        return Roles.values()[randNumber].roleName + (randNumber + 2);
+        int randNumber13 = new Random().nextInt(3);
+        int randNumber14 = new Random().nextInt(4) + 1;
+        return Roles.values()[randNumber13].roleName + (randNumber14);
     }
 
     static String getEmail(String name) {
